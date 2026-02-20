@@ -91,7 +91,7 @@ test('Should not throw', () => {
 test('https://github.com/nodejs/node-v0.x-archive/issues/2893', () => {
   let threw = false;
   try {
-    // eslint-disable-next-line no-restricted-syntax
+    // eslint-disable-next-line eslint-js/no-restricted-syntax
     assert.throws(() => {
       assert.ifError(null);
     });

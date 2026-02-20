@@ -1,6 +1,6 @@
 'use strict';
 
-/* eslint-disable dot-notation */
+/* eslint-disable eslint-js/dot-notation */
 
 const common = require('../common.js');
 

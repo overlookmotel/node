@@ -630,7 +630,7 @@ promise_test(() => {
   let pullCalled = 0;
   let cancelCalled = 0;
 
-  /* eslint-disable no-use-before-define */
+  /* eslint-disable eslint-js/no-use-before-define */
   class Source {
     start(c) {
       startCalled++;
@@ -648,7 +648,7 @@ promise_test(() => {
       assert_equals(this, theSource, 'cancel() should be called with the correct this');
     }
   }
-  /* eslint-enable no-use-before-define */
+  /* eslint-enable eslint-js/no-use-before-define */
 
   const theSource = new Source();
   theSource.debugName = 'the source object passed to the constructor'; // makes test failures easier to diagnose

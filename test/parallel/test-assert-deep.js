@@ -60,7 +60,7 @@ class MyRegExp extends RegExp {
 // That is why we discourage using deepEqual in our own tests.
 
 // Turn off no-restricted-properties because we are testing deepEqual!
-/* eslint-disable no-restricted-properties */
+/* eslint-disable eslint-js/no-restricted-properties */
 
 test('deepEqual', () => {
   const arr = new Uint8Array([120, 121, 122, 10]);
@@ -995,13 +995,13 @@ test('Additional tests', () => {
   }
 
   assert.throws(
-    // eslint-disable-next-line no-restricted-syntax
+    // eslint-disable-next-line eslint-js/no-restricted-syntax
     () => assert.deepStrictEqual(4, '4'),
     { message: `${defaultMsgStart}\n4 !== '4'\n` }
   );
 
   assert.throws(
-    // eslint-disable-next-line no-restricted-syntax
+    // eslint-disable-next-line eslint-js/no-restricted-syntax
     () => assert.deepStrictEqual(true, 1),
     { message: `${defaultMsgStart}\ntrue !== 1\n` }
   );
@@ -1636,7 +1636,7 @@ test('Own property constructor properties should check against the original prot
   assert.notDeepStrictEqual(b, a);
 
   // Turn off no-restricted-properties because we are testing deepEqual!
-  /* eslint-disable no-restricted-properties */
+  /* eslint-disable eslint-js/no-restricted-properties */
   assert.deepEqual(a, b);
   assert.deepEqual(b, a);
 });
@@ -1667,7 +1667,7 @@ test('Inherited null prototype without own constructor properties should check t
   assert.notDeepStrictEqual({ __proto__: { __proto__: null } }, { __proto__: null });
 
   // Turn off no-restricted-properties because we are testing deepEqual!
-  /* eslint-disable no-restricted-properties */
+  /* eslint-disable eslint-js/no-restricted-properties */
   assert.deepEqual(a, b);
   assert.deepEqual(b, a);
 });

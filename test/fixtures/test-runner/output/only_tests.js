@@ -56,7 +56,7 @@ describe.only('describe only = true, with subtests', common.mustCall(() => {
 describe.only('describe only = true, with a mixture of subtests', common.mustCall(() => {
   it.only('`it` subtest 1', common.mustCall());
 
-  // eslint-disable-next-line no-restricted-syntax
+  // eslint-disable-next-line eslint-js/no-restricted-syntax
   it.only('`it` async subtest 1', common.mustCall(async () => {}));
 
   it('`it` subtest 2 only=true', { only: true }, common.mustCall());
@@ -69,7 +69,7 @@ describe.only('describe only = true, with a mixture of subtests', common.mustCal
 
   test.only('`test` subtest 1', common.mustCall());
 
-  // eslint-disable-next-line no-restricted-syntax
+  // eslint-disable-next-line eslint-js/no-restricted-syntax
   test.only('`test` async subtest 1', common.mustCall(async () => {}));
 
   test('`test` subtest 2 only=true', { only: true }, common.mustCall());

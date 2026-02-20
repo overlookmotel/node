@@ -38,8 +38,8 @@ const strictEqualMessageStart = 'Expected values to be strictly equal:\n';
 const start = 'Expected values to be strictly deep-equal:';
 const actExp = '+ actual - expected';
 
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable no-restricted-properties */
+/* eslint-disable eslint-js/no-restricted-syntax */
+/* eslint-disable eslint-js/no-restricted-properties */
 
 test('some basics', () => {
   assert.ok(assert.AssertionError.prototype instanceof Error,
@@ -974,7 +974,7 @@ test('Additional asserts', () => {
   );
 
   assert.throws(
-    // eslint-disable-next-line dot-notation, @stylistic/js/quotes
+    // eslint-disable-next-line eslint-js/dot-notation, @stylistic/js/quotes
     () => assert['ok']["apply"](null, [0]),
     {
       code: 'ERR_ASSERTION',
@@ -1779,5 +1779,5 @@ test('Functions as error message', () => {
   );
 });
 
-/* eslint-enable no-restricted-syntax */
-/* eslint-enable no-restricted-properties */
+/* eslint-enable eslint-js/no-restricted-syntax */
+/* eslint-enable eslint-js/no-restricted-properties */

@@ -82,5 +82,5 @@ setInterval(common.mustCall(function() { clearInterval(this); }), 10);
 
 // Test no timeout separately
 setTimeout(common.mustCall());
-// eslint-disable-next-line no-restricted-syntax
+// eslint-disable-next-line eslint-js/no-restricted-syntax
 setInterval(common.mustCall(function() { clearInterval(this); }));

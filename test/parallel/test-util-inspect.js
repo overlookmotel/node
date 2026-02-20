@@ -107,7 +107,7 @@ assert.strictEqual(util.inspect({}), '{}');
 assert.strictEqual(util.inspect({ a: 1 }), '{ a: 1 }');
 assert.strictEqual(util.inspect({ a: function() {} }), '{ a: [Function: a] }');
 assert.strictEqual(util.inspect({ a: () => {} }), '{ a: [Function: a] }');
-// eslint-disable-next-line func-name-matching
+// eslint-disable-next-line eslint-js/func-name-matching
 assert.strictEqual(util.inspect({ a: async function abc() {} }),
                    '{ a: [AsyncFunction: abc] }');
 assert.strictEqual(util.inspect({ a: async () => {} }),
@@ -2676,7 +2676,7 @@ assert.strictEqual(
 {
   const recursivelyThrowingErrorDesc = {
     __proto__: null,
-    // eslint-disable-next-line no-restricted-syntax
+    // eslint-disable-next-line eslint-js/no-restricted-syntax
     get() { throw createRecursivelyThrowingError(); },
     configurable: true,
     enumerable: true,

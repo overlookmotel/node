@@ -1,4 +1,4 @@
-/* eslint-disable strict, no-var, no-delete-var, no-undef, node-core/required-modules, node-core/require-common-first */
+/* eslint-disable eslint-js/strict, no-var, no-delete-var, no-undef, node-core/required-modules, node-core/require-common-first */
 // Importing common would break the execution. Indeed running `vm.runInThisContext` alters the global context
 // when declaring new variables with `var`. The other rules (strict, no-var, no-delete-var) have been disabled
 // in order to be able to test this specific not-strict case playing with `var` and `delete`.

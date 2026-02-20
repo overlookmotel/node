@@ -118,7 +118,7 @@ function child(section) {
   });
 
   let innerDebug = null;
-  // eslint-disable-next-line no-restricted-syntax
+  // eslint-disable-next-line eslint-js/no-restricted-syntax
   const debug = util.debuglog(section, common.mustCall((cb) => {
     assert.strictEqual(typeof cb, 'function');
     innerDebug = cb;

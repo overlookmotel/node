@@ -33,9 +33,9 @@ suite('equalArrayPairs', () => {
 
   for (const arrayPair of equalArrayPairs) {
     test('', () => {
-      // eslint-disable-next-line no-restricted-properties
+      // eslint-disable-next-line eslint-js/no-restricted-properties
       assert.deepEqual(arrayPair[0], arrayPair[1]);
-      // eslint-disable-next-line no-restricted-properties
+      // eslint-disable-next-line eslint-js/no-restricted-properties
       assert.deepEqual(arrayPair[1], arrayPair[0]);
       assert.deepStrictEqual(arrayPair[0], arrayPair[1]);
       assert.deepStrictEqual(arrayPair[1], arrayPair[0]);
@@ -54,9 +54,9 @@ suite('looseEqualArrayPairs', () => {
 
   for (const arrayPair of looseEqualArrayPairs) {
     test('', () => {
-      // eslint-disable-next-line no-restricted-properties
+      // eslint-disable-next-line eslint-js/no-restricted-properties
       assert.deepEqual(arrayPair[0], arrayPair[1]);
-      // eslint-disable-next-line no-restricted-properties
+      // eslint-disable-next-line eslint-js/no-restricted-properties
       assert.deepEqual(arrayPair[1], arrayPair[0]);
       assert.throws(
         makeBlock(assert.deepStrictEqual, arrayPair[0], arrayPair[1]),
@@ -116,12 +116,12 @@ suite('notEqualArrayPairs', () => {
   for (const arrayPair of notEqualArrayPairs) {
     test('', () => {
       assert.throws(
-        // eslint-disable-next-line no-restricted-properties
+        // eslint-disable-next-line eslint-js/no-restricted-properties
         makeBlock(assert.deepEqual, arrayPair[0], arrayPair[1]),
         assert.AssertionError
       );
       assert.throws(
-        // eslint-disable-next-line no-restricted-properties
+        // eslint-disable-next-line eslint-js/no-restricted-properties
         makeBlock(assert.deepEqual, arrayPair[1], arrayPair[0]),
         assert.AssertionError
       );

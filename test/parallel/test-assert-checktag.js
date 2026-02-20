@@ -4,7 +4,7 @@ const { test } = require('node:test');
 const assert = require('assert');
 
 // Turn off no-restricted-properties because we are testing deepEqual!
-/* eslint-disable no-restricted-properties */
+/* eslint-disable eslint-js/no-restricted-properties */
 
 // Disable colored output to prevent color codes from breaking assertion
 // message comparisons. This should only be an issue when process.stdout

@@ -1,4 +1,4 @@
-/* eslint-disable strict */
+/* eslint-disable eslint-js/strict */
 require('../common');
 
 // In Node.js 0.10, a bug existed that caused strict functions to not capture

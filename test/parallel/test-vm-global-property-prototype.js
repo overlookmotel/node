@@ -160,7 +160,7 @@ const resultValue = {
 });
 `, ctx);
 
-// eslint-disable-next-line no-restricted-properties
+// eslint-disable-next-line eslint-js/no-restricted-properties
 assert.deepEqual(result, {
   resultHasOwn: {
     onSelf: true,

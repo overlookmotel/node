@@ -113,7 +113,7 @@ if (common.isWindows) {
 {
   const env = structuredClone(process.env);
   // deepEqual(), not deepStrictEqual(), because of different prototypes.
-  // eslint-disable-next-line no-restricted-properties
+  // eslint-disable-next-line eslint-js/no-restricted-properties
   assert.deepEqual(env, process.env);
 }
 

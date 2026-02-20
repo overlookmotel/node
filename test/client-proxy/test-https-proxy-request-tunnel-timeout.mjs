@@ -25,7 +25,7 @@ await once(server, 'listening');
 
 // Start a proxy server that accepts CONNECT but never responds.
 const proxy = http.createServer();
-// eslint-disable-next-line no-restricted-syntax
+// eslint-disable-next-line eslint-js/no-restricted-syntax
 proxy.on('connect', common.mustCall((req, res) => {
   // Don't respond - just hang to simulate timeout
 }, 1));

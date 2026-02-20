@@ -24539,7 +24539,7 @@ var ts;
             if (templateFlags === void 0) { templateFlags = 0 /* TokenFlags.None */; }
             ts.Debug.assert(!(templateFlags & ~2048 /* TokenFlags.TemplateLiteralLikeFlags */), "Unsupported template flags.");
             // NOTE: without the assignment to `undefined`, we don't narrow the initial type of `cooked`.
-            // eslint-disable-next-line no-undef-init
+            // eslint-disable-next-line eslint-js/no-undef-init
             var cooked = undefined;
             if (rawText !== undefined && rawText !== text) {
                 cooked = getCookedText(kind, rawText);

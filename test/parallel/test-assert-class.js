@@ -91,7 +91,7 @@ test('Assert class non strict', () => {
       "Received type string ('string')",
   });
 
-  /* eslint-disable no-restricted-syntax */
+  /* eslint-disable eslint-js/no-restricted-syntax */
   {
     function thrower(errorConstructor) {
       throw new errorConstructor({});
@@ -132,7 +132,7 @@ test('Assert class non strict', () => {
     }
     assertInstance.ok(threw);
   }
-  /* eslint-enable no-restricted-syntax */
+  /* eslint-enable eslint-js/no-restricted-syntax */
 });
 
 test('Assert class strict', () => {
