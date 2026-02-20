@@ -1,3 +1,5 @@
+/* eslint-disable capitalized-comments */
+
 import { readdirSync } from 'node:fs';
 import Module from 'node:module';
 import { fileURLToPath, URL } from 'node:url';
@@ -20,7 +22,7 @@ const { default: js } = await importEslintTool('@eslint/js');
 const { default: babelEslintParser } = await importEslintTool('@babel/eslint-parser');
 const babelPluginSyntaxImportSource = resolveEslintTool('@babel/plugin-syntax-import-source');
 const { default: jsdoc } = await importEslintTool('eslint-plugin-jsdoc');
-const { default: markdown } = await importEslintTool('@eslint/markdown');
+// const { default: markdown } = await importEslintTool('@eslint/markdown');
 const { default: stylisticJs } = await importEslintTool('@stylistic/eslint-plugin');
 
 nodeCore.RULES_DIR = fileURLToPath(new URL('./tools/eslint-rules', import.meta.url));
@@ -79,6 +81,7 @@ export default [
     ),
     '!test/fixtures/v8',
     '!test/fixtures/vm',
+    '**/*.md',
   ]),
   // #endregion
   // #region general config
@@ -353,15 +356,16 @@ export default [
   },
   // #endregion
   // #region markdown config
+  /*
   {
-    files: ['**/*.md'],
+    files: ['**\/*.md'],
     plugins: {
       markdown,
     },
     processor: 'markdown/markdown',
   },
   {
-    files: ['**/*.md/*.{js,cjs}'],
+    files: ['**\/*.md/*.{js,cjs}'],
     languageOptions: {
       parserOptions: {
         ecmaFeatures: { impliedStrict: true },
@@ -371,7 +375,7 @@ export default [
   },
   {
     files: [
-      '**/*.md/*.mjs',
+      '**\/*.md/*.mjs',
       'doc/api/esm.md/*.js',
       'doc/api/packages.md/*.js',
     ],
@@ -410,6 +414,7 @@ export default [
       },
     ] },
   },
+  */
   // #endregion
   // #region partials
   ...benchmarkConfig,

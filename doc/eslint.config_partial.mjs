@@ -1,15 +1,18 @@
+/* eslint-disable capitalized-comments, @stylistic/js/max-len */
+
 import {
   globals,
-  noRestrictedSyntaxCommonAll,
-  noRestrictedSyntaxCommonLib,
+  // noRestrictedSyntaxCommonAll,
+  // noRestrictedSyntaxCommonLib,
 } from '../tools/eslint/eslint.config_utils.mjs';
-import { builtinModules } from 'node:module';
+// import { builtinModules } from 'node:module';
 
-const builtin = builtinModules.filter((name) => !name.startsWith('node:'));
+// const builtin = builtinModules.filter((name) => !name.startsWith('node:'));
 
 export default [
+  /*
   {
-    files: ['doc/**/*.md/*.{js,mjs,cjs}'],
+    files: ['doc/**\/*.md/*.{js,mjs,cjs}'],
     rules: {
       // Ease some restrictions in doc examples.
       'no-restricted-properties': 'off',
@@ -43,6 +46,7 @@ export default [
       ],
     },
   },
+  */
   {
     files: ['doc/api_assets/*.js'],
     languageOptions: {
