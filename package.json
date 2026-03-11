@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "migrate": "rm -f oxlintrc.json; ../../modules/oxlint-migrate/dist/bin/oxlint-migrate.mjs --with-nursery --js-plugins --details --output-file oxlintrc.json && node migrate-post-process.mjs",
+    "eslint": "./tools/eslint/node_modules/eslint/bin/eslint.js --max-warnings=0 --report-unused-disable-directives eslint.config.mjs benchmark doc lib test tools",
+    "oxlint": "./node_modules/oxlint/bin/oxlint -c oxlintrc.json --deny-warnings --report-unused-disable-directives eslint.config.mjs benchmark doc lib test tools"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.7.1",
+    "eslint-plugin-jsdoc": "^62.4.1",
+    "oxlint": "^1.52.0",
+    "oxlint-plugin-eslint": "^1.52.0"
+  }
+}
